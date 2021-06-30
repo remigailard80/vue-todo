@@ -1,0 +1,10 @@
+// ref : http://labs.brandi.co.kr/2020/11/04/bangdj.html
+// utils.js에 웹팩 구문으로 모든 컴포넌트 vue 탬플릿에 @import 될 수 있도록 설정 추가.
+
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import
+  '~@/assets/scss/abstracts/variables',
+  '~@/assets/scss/abstracts/functions',
+  '~@/assets/scss/abstracts/mixins';
