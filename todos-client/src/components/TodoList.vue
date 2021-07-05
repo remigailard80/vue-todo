@@ -2,7 +2,10 @@
     <ul class="list-group">
         <li class="todo-list-item" v-for="(todo, idx) in todos" :key="{idx}">
             {{todo.name}}
-            <span> 더보기 ▼ </span>
+            <span v-on:click="onClickDelete(idx)"> 삭제 </span>
+            <!-- <div class="list-dropdown" v-if="modal === true">
+                <span> 삭제 </span>
+            </div> -->
         </li>
     </ul>
 </template>
@@ -14,9 +17,18 @@
         },
         data () {
             return {
-                msg: "Hello, Input"
+                msg: "Hello, Input",
+                modal: false
             }
-        }
+        },
+        methods: {
+            onClickModal: function() {
+                this.modal = !this.modal;
+            },
+            onClickDelete: function(idx) {
+                this.$props.todos.splice(idx,1);
+            },
+        },
     }
 </script>
 

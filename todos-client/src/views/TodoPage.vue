@@ -2,7 +2,7 @@
     <div class="container">
          <h2> Todo List </h2>
          <!-- https://simplevue.gitbook.io/intro/04.-loop-condition -->
-         <TodoInput />
+         <TodoInput :handleOnClick="addTodo"/>
          <TodoList :todos="todos" />
     </div>
 </template>
@@ -32,6 +32,12 @@
                 ],
                 msg: 'Example Vue'
             };
+        },
+        methods: {
+            addTodo(data) {
+                console.log(data);
+                this.todos.push({'name' : data})
+            }
         },
         mounted() {
             console.log("Component Mounted");

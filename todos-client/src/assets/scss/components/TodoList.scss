@@ -16,4 +16,23 @@
         font-weight: bold;
         cursor: pointer;
     }
+    .list-dropdown {
+        display: flex;
+        padding-left: 15px;
+        z-index: 2;
+        position: absolute;
+        right: 20px;
+        width: 150px;
+        height: 30px;
+        bottom: -20px;
+        background-color: white;
+        border: 0.5px rgba(0, 0, 0, 0.123) solid;
+        border-radius: 5px;
+        box-shadow: 1px 1px rgba(0, 0, 0, 0.123);
+        > span {
+            float: left;
+            align-self: center;
+            font-size: 14px;
+        }
+    }
 }
